@@ -14,7 +14,7 @@ $(GOPATH)/bin/linux_arm/registry:
 
 build: $(GOPATH)/bin/linux_arm/registry bin
 	cp $(GOPATH)/bin/linux_arm/registry ./bin/
-	upx -qq -best ./bin/registry
+	upx -qq --best ./bin/registry
 	docker build -t $(DOCKER_IMAGE_NAME) .
 	docker tag -f $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_NAME):latest
 	docker tag -f $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_TAGNAME)
