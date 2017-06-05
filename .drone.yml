@@ -2,4 +2,5 @@ pipeline:
   build:
     image: golang:1.8
     commands:
+    - apt-get update && apt-get install -y --no-install-recommends upx-ucl
     - make build
