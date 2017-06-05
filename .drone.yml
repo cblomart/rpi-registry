@@ -4,12 +4,9 @@ pipeline:
     commands:
     - apt-get update && apt-get install -y --no-install-recommends upx-ucl
     - make build
-publish:
-  docker:
+  publish:
+    image: plugins/docker
     username: cblomart
     password: $$DOCKER_PASSWORD
     email: cblomart@gmail.com
     repo: cblomart/rpi-registry
-    tag: latest
-    file: Dockerfile
-    insecure: false
