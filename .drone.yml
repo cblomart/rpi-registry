@@ -6,7 +6,5 @@ pipeline:
     - make build
   publish:
     image: plugins/docker
-    username: cblomart
-    password: $$DOCKER_PASSWORD
-    email: cblomart@gmail.com
+    secrets: [ docker_username, docker_password ]
     repo: cblomart/rpi-registry
