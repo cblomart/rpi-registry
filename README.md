@@ -16,7 +16,7 @@ And push it to the docker hub
 
 > make push
 
-The erase the generated binaries.
+Then erase the generated binaries.
 
 > make clean
 
